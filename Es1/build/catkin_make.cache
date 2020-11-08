@@ -1,0 +1,2 @@
+beginner_tutorials
+-DCATKIN_DEVEL_PREFIX=/home/cescom/Scrivania/progetti/ROS/Es1/devel -DCMAKE_INSTALL_PREFIX=/home/cescom/Scrivania/progetti/ROS/Es1/install -G Unix Makefiles
