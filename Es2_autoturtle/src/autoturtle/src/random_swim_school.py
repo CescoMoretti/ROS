@@ -6,6 +6,7 @@ from turtlesim.msg import Pose
 from geometry_msgs.msg import Twist
 from turtlesim.srv import TeleportAbsolute
 import time
+import random
 
 
 
@@ -46,9 +47,10 @@ class ControlTurtlesim():
         rospy.loginfo("Set rate %dHZ",x)
 
         #data utils
-        ndigits = 2
-        sx =5.5
-        sy=5.5
+        ndigits = 1                
+        sx = random.randint(2,6)
+        sy= random.randint(2, 6)
+        teleport_absolute_client(sx,sy,0)
         t = time.time()
         #cycle	    
         while not rospy.is_shutdown():
