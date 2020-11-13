@@ -1,0 +1,8 @@
+prefix=/home/cescom/Scrivania/progetti/ROS/Es3_WallFollow/devel
+
+Name: wall_following
+Description: Description of wall_following
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
