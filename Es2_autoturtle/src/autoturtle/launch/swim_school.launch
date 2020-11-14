@@ -1,0 +1,12 @@
+<launch>
+	
+	
+	<node name = "sim" pkg = "turtlesim" type = "turtlesim_node" />
+		
+	
+
+	<node name = "school" pkg = "autoturtle" type = "swim_school.py" output = "screen">		
+
+	</node>
+
+</launch>

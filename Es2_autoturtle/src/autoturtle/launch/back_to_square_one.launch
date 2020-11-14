@@ -1,0 +1,14 @@
+<launch>
+	
+	
+	<node name = "sim" pkg = "turtlesim" type = "turtlesim_node" />
+		
+	
+
+	<node name = "school" pkg = "autoturtle" type = "back_to_square_one.py" output = "screen" >
+		<remap from ="/turtlesim/background_r" to="/sim/background_r" />
+		<remap from ="/turtlesim/background_g" to="/sim/background_g" />
+		<remap from ="/turtlesim/background_b" to="/sim/background_b" />
+	</node>
+
+</launch>

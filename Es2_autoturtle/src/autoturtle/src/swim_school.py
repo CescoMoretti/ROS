@@ -32,7 +32,7 @@ class ControlTurtlesim():
         rospy.on_shutdown(self.shutdown)
         
         #msg publisher
-        self.cmd_vel = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=300)        
+        self.cmd_vel = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=100)        
         move_cmd = Twist()
 
         #starting data  
@@ -41,12 +41,12 @@ class ControlTurtlesim():
         move_cmd.angular.z = input("angular velocity:")
 
         # set frequency to 1/x second	   
-        x = 300
+        x = 100
         rate = rospy.Rate(x);        
         rospy.loginfo("Set rate %dHZ",x)
 
         #data utils
-        ndigits = 2
+        ndigits = 1
         sx =5.5
         sy=5.5
         t = time.time()

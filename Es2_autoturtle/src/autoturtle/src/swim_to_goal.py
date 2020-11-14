@@ -27,7 +27,7 @@ class ControlTurtlesim():
         rospy.loginfo(" Press CTRL+c to stop moving the Turtle")       
         rospy.on_shutdown(self.shutdown)        
         #msg publisher
-        self.cmd_vel = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=40)        
+        self.cmd_vel = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)        
         move_cmd = Twist()
         #starting data
         print("insert the coordinates")
@@ -37,12 +37,12 @@ class ControlTurtlesim():
         tollerance = input("set the tollerance: ")       
         
         # set frequency to 1/x second	   
-        x = 40
+        x = 10
         rate = rospy.Rate(x);        
         rospy.loginfo("Set rate %dHZ",x)
         #data utils
         costL = 1.5
-        costA = 4
+        costA = 4.0
               
         #cycle	    
         while not rospy.is_shutdown() and self.eucl_dist(goal) >= tollerance: 

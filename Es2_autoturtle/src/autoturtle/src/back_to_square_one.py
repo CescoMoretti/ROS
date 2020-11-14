@@ -58,8 +58,7 @@ class ControlTurtlesim():
         self.cmd_vel = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=40)        
         move_cmd = Twist()
         #starting data 
-        l = input("insert square lenght: ")
-        
+        l = input("insert square lenght: ")        
         change_background(255,70,70)        
  
         # set frequency to 1/x second	   
