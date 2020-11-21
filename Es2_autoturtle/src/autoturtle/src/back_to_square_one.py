@@ -77,11 +77,14 @@ class ControlTurtlesim():
         move_cmd.linear.y = 0
         move_cmd.linear.z = 0        
         set_pen(False)
-        #cycle	    
+        #cycle	
+        ''' al posto del teleport si possono cambiare le velocita per fargli fare gli angoli,
+        ma mi piaceva di piu con la tartaruga che si gira, l unica cosa e che facendo cosi 
+        un po gli spigoli'''
+
+
         while cycleFlag and not rospy.is_shutdown():
-            #al posto del teleport si possono cambiare le velocità per fargli fare gli angoli,
-            #ma mi piaceva di piu con la tartaruga che si gira, l'unica cosa è che facendo cosi 
-            #sporca un po gli spigoli
+            
             if round(self.pose.x,ndigits) == 1.0+l and round(self.pose.y,ndigits) ==1.0:                
                 teleport_absolute_client(self.pose.x,self.pose.y,math.pi/2)
 
