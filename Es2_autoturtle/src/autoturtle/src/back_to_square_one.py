@@ -62,7 +62,7 @@ class ControlTurtlesim():
         change_background(255,70,70)        
  
         # set frequency to 1/x second	   
-        x = 40
+        x = 20
         rate = rospy.Rate(x);        
         rospy.loginfo("Set rate %dHZ",x)
         #data utils
@@ -73,30 +73,32 @@ class ControlTurtlesim():
 
         set_pen(True)
         teleport_absolute_client(1,1,0)
-        move_cmd.linear.x = 2
+        move_cmd.linear.x = 1.5
         move_cmd.linear.y = 0
         move_cmd.linear.z = 0        
         set_pen(False)
         #cycle	    
         while cycleFlag and not rospy.is_shutdown():
-            
-            if round(self.pose.x,ndigits) == 1+l and round(self.pose.y,ndigits) ==1:                
+            #al posto del teleport si possono cambiare le velocità per fargli fare gli angoli,
+            #ma mi piaceva di piu con la tartaruga che si gira, l'unica cosa è che facendo cosi 
+            #sporca un po gli spigoli
+            if round(self.pose.x,ndigits) == 1.0+l and round(self.pose.y,ndigits) ==1.0:                
                 teleport_absolute_client(self.pose.x,self.pose.y,math.pi/2)
 
-            if round(self.pose.x,ndigits) == 1+l and round(self.pose.y,ndigits) ==1+l:                
+            if round(self.pose.x,ndigits) == 1.0+l and round(self.pose.y,ndigits) ==1.0+l:                
                 teleport_absolute_client(self.pose.x,self.pose.y,math.pi)              
             
-            if round(self.pose.x,ndigits) == 1 and round(self.pose.y,ndigits) ==1+l:                
+            if round(self.pose.x,ndigits) == 1.0 and round(self.pose.y,ndigits) ==1.0+l:                
                 teleport_absolute_client(self.pose.x,self.pose.y,(math.pi/2)*3)
                 lastFlag = True	        
             
-            if round(self.pose.x,ndigits) == 1 and round(self.pose.y,ndigits) ==1 and lastFlag:                
+            if round(self.pose.x,ndigits) == 1.0 and round(self.pose.y,ndigits) ==1.0 and lastFlag:                
                 teleport_absolute_client(self.pose.x,self.pose.y,math.pi*2)
                 cycleFlag = False
             
             self.cmd_vel.publish(move_cmd)
             rate.sleep()
-        change_background(69,86,255) #neded it make consecutive test, but it delete the previus square
+        #change_background(69,86,255) #neded it make consecutive test, but it delete the previus square
     #shutdown function
     def shutdown(self):        
         rospy.loginfo("Stopping the turtle")        
