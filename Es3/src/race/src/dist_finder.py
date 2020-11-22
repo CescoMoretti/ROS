@@ -32,7 +32,7 @@ def getRange(data,theta):
 	return 
 
 def callback(data):
-	theta = 50
+	theta = 40
 	a0 = 40
 	a1 = a0 + theta
 	vel = 1
@@ -41,12 +41,12 @@ def callback(data):
 	b = getRange(data,a0)	
 	swing = math.radians(theta)	
 	
-	AC = 8.0
+	AC = 7.0
 	## Your code goes here to compute alpha, AB, and CD..and finally the error.
 	alpha = math.atan2(a* math.cos(swing)-b, a*math.sin(swing))
 	AB = b* math.cos(alpha)
 	CD = AB + AC * math.sin(alpha)
-	error = 2 - CD
+	error = 1.5 - CD
 	
 	#collision avoidance
 	if getRange(data,130) < 0.5:

@@ -3,8 +3,9 @@
 import rospy
 from race.msg import pid_input
 from ackermann_msgs.msg import AckermannDrive
+import math
 
-kp = 0.7
+kp = 0.64
 kd = 0.17
 servo_offset = 0	# zero correction offset in case servo is misaligned. 
 prev_error = 0.0
@@ -20,22 +21,20 @@ def control(data):
 	global kp
 	global kd	
 	global past_vel
-	## Funziona, ma ha qualche problema da sistemare:
-	# 1- lo sterzo ci mette una marea di tempo ad andare in fase, ma se si cambiano troppo
-	#    le costanti del PD la macchina si schianta o inverte il giro nella curva stretta
-	# 2- il PD della velocità è un po improvvistato e fa un po schifo
+	## TODO:
+	# 1- arrivo in fase dello sterzo lenta
+	# 2- sistemare pid velocita in base allo sterzo nuovo
 
-	#scale error (non so se è quello che intendeva)
+	#scale error (non so se e quello che intendeva)
 	error = data.pid_error
-	if abs(error) < 0.05:
-		error = 0
+	if abs(error) < 0.005:
+		error = 0.0
 
-	#PD control per sterzo e velocità 		
+	#PD control per sterzo e velocita 		
 	anglecorr = kp * error + kd * (prev_error - error)
-	angle = prev_error - anglecorr
-	prev_error = error
-	vel_input = past_vel +( +0.32 - 1.45*abs(angle) -  1.4 *abs(prev_error - data.pid_error))
-	#                   acc. base  frena prima delle curve   non accelera durante una curva
+	angle = prev_error - anglecorr	
+	vel_input = past_vel +( 0.022 - 1.7 * math.pow( abs(prev_error - data.pid_error),2))
+	prev_error = error                  
 	
 	#controllo sterzo
 	if angle < -100:
@@ -45,8 +44,8 @@ def control(data):
 
 	#controllo velocita
 	if data.pid_vel != 0.0:
-		if vel_input < 0.4:
-			vel_input = 0.4
+		if vel_input < 0.3:
+			vel_input = 0.3
 	else:
 		vel_input = 0
 	past_vel = vel_input
