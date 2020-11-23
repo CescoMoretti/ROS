@@ -1,2 +1,0 @@
-autoturtle
--DCATKIN_DEVEL_PREFIX=/home/cescom/Scrivania/progetti/ROS/Es2_autoturtle/devel -DCMAKE_INSTALL_PREFIX=/home/cescom/Scrivania/progetti/ROS/Es2_autoturtle/install -G Unix Makefiles

@@ -1,2 +1,0 @@
-race
--DCATKIN_DEVEL_PREFIX=/home/cescom/Scrivania/progetti/ROS/Es3/devel -DCMAKE_INSTALL_PREFIX=/home/cescom/Scrivania/progetti/ROS/Es3/install -G Unix Makefiles

@@ -1,0 +1,2 @@
+autoturtle:beginer_tutorials:wall_following
+-DCATKIN_DEVEL_PREFIX=/home/cescom/Scrivania/progetti/ROS/ws_lezioni/devel -DCMAKE_INSTALL_PREFIX=/home/cescom/Scrivania/progetti/ROS/ws_lezioni/install -G Unix Makefiles
