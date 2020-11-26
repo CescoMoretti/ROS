@@ -935,6 +935,24 @@ beginer_tutorials/preinstall:
 .PHONY : beginer_tutorials/preinstall
 
 #=============================================================================
+# Directory level rules for directory follow_the_gap
+
+# Convenience name for "all" pass in the directory.
+follow_the_gap/all:
+
+.PHONY : follow_the_gap/all
+
+# Convenience name for "clean" pass in the directory.
+follow_the_gap/clean:
+
+.PHONY : follow_the_gap/clean
+
+# Convenience name for "preinstall" pass in the directory.
+follow_the_gap/preinstall:
+
+.PHONY : follow_the_gap/preinstall
+
+#=============================================================================
 # Directory level rules for directory wall_following
 
 # Convenience name for "all" pass in the directory.

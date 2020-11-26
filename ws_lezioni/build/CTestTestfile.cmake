@@ -7,4 +7,5 @@
 subdirs("gtest")
 subdirs("autoturtle")
 subdirs("beginer_tutorials")
+subdirs("follow_the_gap")
 subdirs("wall_following")

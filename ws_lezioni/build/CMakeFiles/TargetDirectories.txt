@@ -64,6 +64,13 @@
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beginer_tutorials/CMakeFiles/install/local.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beginer_tutorials/CMakeFiles/rebuild_cache.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beginer_tutorials/CMakeFiles/install.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/follow_the_gap/CMakeFiles/install/strip.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/follow_the_gap/CMakeFiles/edit_cache.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/follow_the_gap/CMakeFiles/list_install_components.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/follow_the_gap/CMakeFiles/test.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/follow_the_gap/CMakeFiles/install/local.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/follow_the_gap/CMakeFiles/rebuild_cache.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/follow_the_gap/CMakeFiles/install.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/wall_following/CMakeFiles/install.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/wall_following/CMakeFiles/wall_following_genpy.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/wall_following/CMakeFiles/wall_following_generate_messages_py.dir
