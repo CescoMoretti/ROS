@@ -51,9 +51,9 @@ def control(data):
 	past_vel = vel_input
 
 	#pubblish msg
-	msg = AckermannDrive()
-	msg.speed = 500.0	
-	msg.steering_angle = angle
+	msg = Point32()
+	msg.x = 500.0	
+	msg.y = angle
 	pub.publish(msg)
 
 if __name__ == '__main__':
