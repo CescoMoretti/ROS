@@ -2,7 +2,7 @@
 
 import rospy
 from race.msg import pid_input
-from ackermann_msgs.msg import AckermannDrive
+from ageometry_msgs.msg import Point32
 import math
 
 kp = 0.64
@@ -12,7 +12,7 @@ prev_error = 0.0
 vel_input = 0.30	# arbitrarily initialized. 25 is not a special value. This code can accept input desired velocity from the user.
 past_vel = 0.0
 
-pub = rospy.Publisher('/car_1/offboard/command', AckermannDrive, queue_size=10)
+pub = rospy.Publisher('drive_paramiter', Point32, queue_size=10)
 # setup a publisher to publish to the /car_x/offboard/command topic for your racecar.
 
 def control(data):
@@ -37,10 +37,10 @@ def control(data):
 	prev_error = error                  
 	
 	#controllo sterzo
-	if angle < -100:
-		angle = -100
-	elif angle > 100:
-		angle = 100
+	if angle < -0.5:
+		angle = -0.5
+	elif angle > 0.5:
+		angle = 0.5
 
 	#controllo velocita
 	if data.pid_vel != 0.0:
@@ -52,7 +52,7 @@ def control(data):
 
 	#pubblish msg
 	msg = AckermannDrive()
-	msg.speed = vel_input	
+	msg.speed = 500.0	
 	msg.steering_angle = angle
 	pub.publish(msg)
 
@@ -65,5 +65,5 @@ if __name__ == '__main__':
 	#kd = input("Enter Kd Value: ")
 	#vel_input = input("Enter Velocity: ")
 	rospy.init_node('pid_controller', anonymous=True)
-	rospy.Subscriber("/car_1/error", pid_input, control)
+	rospy.Subscriber("/error", pid_input, control)
 	rospy.spin()

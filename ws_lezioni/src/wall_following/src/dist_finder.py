@@ -13,7 +13,7 @@ desired_trajectory = 1	# distance from the wall (left or right - we cad define..
 vel = 20 		# this vel variable is not really used here.
 error = 0.0
 
-pub = rospy.Publisher('/car_1/error', pid_input, queue_size=10)
+pub = rospy.Publisher('/error', pid_input, queue_size=10)
 # change the value of x to your team number.
 
 ##	Input: 	data: Lidar scan data
