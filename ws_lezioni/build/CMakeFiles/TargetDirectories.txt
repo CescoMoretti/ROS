@@ -57,6 +57,13 @@
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/autoturtle/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/autoturtle/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/autoturtle/CMakeFiles/test.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beatle_test/CMakeFiles/install/strip.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beatle_test/CMakeFiles/edit_cache.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beatle_test/CMakeFiles/list_install_components.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beatle_test/CMakeFiles/test.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beatle_test/CMakeFiles/install/local.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beatle_test/CMakeFiles/rebuild_cache.dir
+/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beatle_test/CMakeFiles/install.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beginer_tutorials/CMakeFiles/install/strip.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beginer_tutorials/CMakeFiles/edit_cache.dir
 /home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beginer_tutorials/CMakeFiles/list_install_components.dir

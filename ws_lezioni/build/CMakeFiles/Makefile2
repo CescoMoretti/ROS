@@ -917,6 +917,24 @@ clean: autoturtle/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory beatle_test
+
+# Convenience name for "all" pass in the directory.
+beatle_test/all:
+
+.PHONY : beatle_test/all
+
+# Convenience name for "clean" pass in the directory.
+beatle_test/clean:
+
+.PHONY : beatle_test/clean
+
+# Convenience name for "preinstall" pass in the directory.
+beatle_test/preinstall:
+
+.PHONY : beatle_test/preinstall
+
+#=============================================================================
 # Directory level rules for directory beginer_tutorials
 
 # Convenience name for "all" pass in the directory.

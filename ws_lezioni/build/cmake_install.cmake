@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/gtest/cmake_install.cmake")
   include("/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/autoturtle/cmake_install.cmake")
+  include("/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beatle_test/cmake_install.cmake")
   include("/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/beginer_tutorials/cmake_install.cmake")
   include("/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/follow_the_gap/cmake_install.cmake")
   include("/home/cescom/Scrivania/progetti/ROS/ws_lezioni/build/wall_following/cmake_install.cmake")

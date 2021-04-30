@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("autoturtle")
+subdirs("beatle_test")
 subdirs("beginer_tutorials")
 subdirs("follow_the_gap")
 subdirs("wall_following")
