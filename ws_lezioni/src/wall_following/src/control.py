@@ -2,7 +2,7 @@
 
 import rospy
 from race.msg import pid_input
-from ageometry_msgs.msg import Point32
+from geometry_msgs.msg import Point32
 import math
 
 kp = 0.64
