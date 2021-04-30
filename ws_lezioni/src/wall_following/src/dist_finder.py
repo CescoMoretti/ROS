@@ -62,6 +62,6 @@ def callback(data):
 if __name__ == '__main__':
 	print("Laser node started")
 	rospy.init_node('dist_finder',anonymous = True)
-	rospy.Subscriber("/car_1/scan",LaserScan,callback)
+	rospy.Subscriber("/scan",LaserScan,callback)
 	# subscribe to the correct /car_x/scan topic for your car..
 	rospy.spin()
