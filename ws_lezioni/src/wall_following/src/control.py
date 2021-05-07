@@ -18,7 +18,7 @@ past_vel = 0.0
 pub = rospy.Publisher('drive_paramiter', Point32, queue_size=10)
 # setup a publisher to publish to the /car_x/offboard/command topic for your racecar.
 def stop_callback(data):
-	stop = data.data
+	global stop = data.data
 
 
 def control(data):
@@ -67,7 +67,7 @@ def control(data):
 	pub.publish(msg)
 
 if __name__ == '__main__':
-
+	global stop
 	print("Listening to error for PID")
 	#kp = input("Enter Kp Value: ")
 	#kd = input("Enter Kd Value: ")
