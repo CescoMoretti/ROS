@@ -40,14 +40,14 @@ def callback(data):
 	a0 = 40
 	a1 = a0 + theta
 	vel = 1
-	a = getRange(data,a1)
+	a = float(getRange(data,a1))
 	print a 
 	b = getRange(data,a0)	
 	swing = math.radians(theta)	
 	
 	AC = 1.0
 	## Your code goes here to compute alpha, AB, and CD..and finally the error.
-	alpha = math.atan2(a* math.cos(swing)-b, a*math.sin(swing))
+	alpha = math.atan2(a * math.cos(swing)-b, a*math.sin(swing))
 	AB = b* math.cos(alpha)
 	CD = AB + AC * math.sin(alpha)
 	error = 0.5- CD
