@@ -22,10 +22,14 @@ pub = rospy.Publisher('/error', pid_input, queue_size=10)
 
 def getRange(data,theta):
 	ind = theta * (len(data.ranges)/270)
+	data.ranges[int(ind)]
+
+	'''
 	if data.ranges[int(ind)] != "nan":
 		return data.ranges[int(ind)]
 	else:
-		return 30
+		return 10.0
+	'''
 # Find the index of the arary that corresponds to angle theta.
 # Return the lidar scan value at that index
 # Do some error checking for NaN and ubsurd values
