@@ -41,7 +41,7 @@ def control(data):
 		angle = -0.5
 	elif angle > 0.5:
 		angle = 0.5
-'''
+	'''
 	#controllo velocita
 	if data.pid_vel != 0.0:
 		if vel_input < 0.3:
@@ -49,7 +49,7 @@ def control(data):
 	else:
 		vel_input = 0
 	past_vel = vel_input
-'''
+	'''
 	#pubblish msg
 	msg = Point32()
 	msg.x = 7500.0	
