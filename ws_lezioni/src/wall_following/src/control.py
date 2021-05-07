@@ -17,9 +17,6 @@ past_vel = 0.0
 
 pub = rospy.Publisher('drive_paramiter', Point32, queue_size=10)
 # setup a publisher to publish to the /car_x/offboard/command topic for your racecar.
-def stop_callback(data):
-	global stop
-	stop = data.data
 
 
 def control(data):
@@ -28,7 +25,7 @@ def control(data):
 	global kp
 	global kd	
 	global past_vel
-	global stop
+
 	## TODO:
 	# 1- arrivo in fase dello sterzo lenta
 	# 2- sistemare pid velocita in base allo sterzo nuovo
@@ -58,10 +55,7 @@ def control(data):
 		vel_input = 0
 	past_vel = vel_input
 	'''
-	if(stop == false):
-		vel = 7500.0
-	else:
-		vel = 0.0
+	vel = 7500.0
 	#pubblish msg
 	msg = Point32()
 	msg.x = vel	
@@ -69,12 +63,11 @@ def control(data):
 	pub.publish(msg)
 
 if __name__ == '__main__':
-	stop = True
+	
 	print("Listening to error for PID")
 	#kp = input("Enter Kp Value: ")
 	#kd = input("Enter Kd Value: ")
 	#vel_input = input("Enter Velocity: ")
 	rospy.init_node('pid_controller', anonymous=True)
 	rospy.Subscriber("/error", pid_input, control)
-	rospy.Subscriber("commands/stop", Bool, stop_callback )
 	rospy.spin()
