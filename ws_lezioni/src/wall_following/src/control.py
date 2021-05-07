@@ -15,7 +15,7 @@ prev_error = 0.0
 vel_input = 0.30	# arbitrarily initialized. 25 is not a special value. This code can accept input desired velocity from the user.
 past_vel = 0.0
 
-pub = rospy.Publisher('drive_paramiter', Point32, queue_size=10)
+pub = rospy.Publisher('drive_parameters', Point32, queue_size=10)
 # setup a publisher to publish to the /car_x/offboard/command topic for your racecar.
 
 
