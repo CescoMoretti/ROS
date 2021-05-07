@@ -22,7 +22,7 @@ pub = rospy.Publisher('/error', pid_input, queue_size=10)
 
 def getRange(data,theta):
 	ind = theta * (len(data.ranges)/270)
-	data.ranges[int(ind)]
+	 return data.ranges[int(ind)]
 
 	'''
 	if data.ranges[int(ind)] != "nan":
@@ -40,7 +40,7 @@ def callback(data):
 	a0 = 40
 	a1 = a0 + theta
 	vel = 1
-	a = float(getRange(data,a1))
+	a = getRange(data,a1)
 	print a 
 	b = getRange(data,a0)	
 	swing = math.radians(theta)	
