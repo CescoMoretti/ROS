@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
 import rospy
-from race.msg import pid_input
+from wall_following.msg import pid_input
 from geometry_msgs.msg import Point32
 import math
-
+global kp
+global kd
+global vel_input
 kp = 0.64
 kd = 0.17
 servo_offset = 0	# zero correction offset in case servo is misaligned. 
