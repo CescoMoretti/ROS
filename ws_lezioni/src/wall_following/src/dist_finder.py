@@ -49,7 +49,7 @@ def callback(data):
 	alpha = math.atan2(a * math.cos(swing)-b, a*math.sin(swing))
 	AB = b* math.cos(alpha)
 	CD = AB + AC * math.sin(alpha)	
-	error = 1.0- CD
+	error = 0.5- CD
 	print(error)
 	
 	#collision avoidance

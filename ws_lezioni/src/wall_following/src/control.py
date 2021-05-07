@@ -52,7 +52,7 @@ def control(data):
 
 	#pubblish msg
 	msg = Point32()
-	msg.x = 500.0	
+	msg.x = 7500.0	
 	msg.y = angle
 	pub.publish(msg)
 
