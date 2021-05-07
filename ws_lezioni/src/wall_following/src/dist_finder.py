@@ -3,7 +3,7 @@
 import rospy
 import math
 from sensor_msgs.msg import LaserScan
-from race.msg import pid_input
+from wall_following.msg import pid_input
 # Import whatever else you think is necessary
 
 # Some useful variable declarations.
