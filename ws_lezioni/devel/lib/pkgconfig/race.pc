@@ -1,8 +1,0 @@
-prefix=/home/cescom/Scrivania/progetti/ROS/ws_lezioni/devel
-
-Name: race
-Description: Description of race
-Version: 0.0.0
-Cflags: -I/home/cescom/Scrivania/progetti/ROS/ws_lezioni/devel/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime roscpp rospy sensor_msgs std_msgs geometry_msgs

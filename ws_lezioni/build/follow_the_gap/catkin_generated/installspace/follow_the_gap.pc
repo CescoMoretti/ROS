@@ -1,8 +1,0 @@
-prefix=/home/cescom/Scrivania/progetti/ROS/ws_lezioni/install
-
-Name: follow_the_gap
-Description: Description of follow_the_gap
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
