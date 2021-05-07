@@ -22,7 +22,7 @@ pub = rospy.Publisher('/error', pid_input, queue_size=10)
 
 def getRange(data,theta):
 	ind = theta * (len(data.ranges)/270)
-	 return data.ranges[int(ind)]
+	return data.ranges[int(ind)]
 
 	'''
 	if data.ranges[int(ind)] != "nan":
