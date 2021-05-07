@@ -3,6 +3,7 @@
 import rospy
 from wall_following.msg import pid_input
 from geometry_msgs.msg import Point32
+from std_msgs.msg import Bool
 import math
 global kp
 global kd
@@ -16,6 +17,9 @@ past_vel = 0.0
 
 pub = rospy.Publisher('drive_paramiter', Point32, queue_size=10)
 # setup a publisher to publish to the /car_x/offboard/command topic for your racecar.
+def stop_callback(data):
+	stop = data.data
+
 
 def control(data):
 	global prev_error
@@ -52,9 +56,13 @@ def control(data):
 		vel_input = 0
 	past_vel = vel_input
 	'''
+	if(stop == false):
+		vel = 7500.0
+	else:
+		vel = 0.0
 	#pubblish msg
 	msg = Point32()
-	msg.x = 7500.0	
+	msg.x = vel	
 	msg.y = angle
 	pub.publish(msg)
 
@@ -66,4 +74,5 @@ if __name__ == '__main__':
 	#vel_input = input("Enter Velocity: ")
 	rospy.init_node('pid_controller', anonymous=True)
 	rospy.Subscriber("/error", pid_input, control)
+	rospy.Subscriber("commands/stop", Bool, stop_callback )
 	rospy.spin()
