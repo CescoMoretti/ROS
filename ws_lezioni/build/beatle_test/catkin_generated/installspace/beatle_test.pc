@@ -1,0 +1,8 @@
+prefix=/home/user/Desktop/ROS/ws_lezioni/install
+
+Name: beatle_test
+Description: Description of beatle_test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

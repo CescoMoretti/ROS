@@ -1,0 +1,8 @@
+prefix=/home/user/Desktop/ROS/ws_lezioni/devel
+
+Name: beginer_tutorials
+Description: Description of beginer_tutorials
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

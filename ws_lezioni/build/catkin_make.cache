@@ -1,0 +1,2 @@
+autoturtle:beatle_test:beginer_tutorials:follow_the_gap:wall_following
+-DCATKIN_DEVEL_PREFIX=/home/user/Desktop/ROS/ws_lezioni/devel -DCMAKE_INSTALL_PREFIX=/home/user/Desktop/ROS/ws_lezioni/install -G Unix Makefiles
