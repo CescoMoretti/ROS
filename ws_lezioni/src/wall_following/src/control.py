@@ -33,7 +33,7 @@ def control(data):
 	#PD control per sterzo e velocita 		
 	anglecorr = kp * error + kd * (prev_error - error)
 	angle = prev_error - anglecorr	
-	vel_input = past_vel +( 0.022 - 1.7 * math.pow( abs(prev_error - data.pid_error),2))
+	#vel_input = past_vel +( 0.022 - 1.7 * math.pow( abs(prev_error - data.pid_error),2))
 	prev_error = error                  
 	
 	#controllo sterzo
@@ -41,7 +41,7 @@ def control(data):
 		angle = -0.5
 	elif angle > 0.5:
 		angle = 0.5
-
+'''
 	#controllo velocita
 	if data.pid_vel != 0.0:
 		if vel_input < 0.3:
@@ -49,7 +49,7 @@ def control(data):
 	else:
 		vel_input = 0
 	past_vel = vel_input
-
+'''
 	#pubblish msg
 	msg = Point32()
 	msg.x = 7500.0	
