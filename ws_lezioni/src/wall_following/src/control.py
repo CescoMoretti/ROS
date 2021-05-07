@@ -68,7 +68,7 @@ def control(data):
 	pub.publish(msg)
 
 if __name__ == '__main__':
-	
+	global stop
 	print("Listening to error for PID")
 	#kp = input("Enter Kp Value: ")
 	#kd = input("Enter Kd Value: ")
