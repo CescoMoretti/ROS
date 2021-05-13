@@ -36,8 +36,9 @@ def control(data):
 		error = 0.0
 
 	#PD control per sterzo e velocita 		
-	anglecorr = kp * error + kd * (prev_error - error)
-	angle = prev_error - anglecorr	
+	anglecorr = kp * error # + kd * (prev_error - error)
+	angle = anglecorr
+	#angle = prev_error - anglecorr	
 	#vel_input = past_vel +( 0.022 - 1.7 * math.pow( abs(prev_error - data.pid_error),2))
 	prev_error = error                  
 	
