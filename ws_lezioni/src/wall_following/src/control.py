@@ -8,7 +8,7 @@ import math
 global kp
 global kd
 global vel_input
-kp = 0.64
+kp = 0.75
 kd = 0.17
 servo_offset = 0	# zero correction offset in case servo is misaligned. 
 prev_error = 0.0
@@ -37,7 +37,7 @@ def control(data):
 
 	#PD control per sterzo e velocita 		
 	anglecorr = kp * error # + kd * (prev_error - error)
-	angle = anglecorr
+	angle = -anglecorr
 	#angle = prev_error - anglecorr	
 	#vel_input = past_vel +( 0.022 - 1.7 * math.pow( abs(prev_error - data.pid_error),2))
 	prev_error = error                  
