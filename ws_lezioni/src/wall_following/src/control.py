@@ -55,7 +55,7 @@ def control(data):
 		vel_input = 0
 	past_vel = vel_input
 	'''
-	vel = 7500.0
+	vel = 8000.0
 	#pubblish msg
 	msg = Point32()
 	msg.x = vel	
