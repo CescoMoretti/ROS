@@ -38,8 +38,7 @@ def getRange(data,theta):
 def callback(data):
 	theta = 40
 	a0 = 40
-	a1 = a0 + theta
-	vel = 1
+	a1 = a0 + theta	
 	a = getRange(data,a1)
 	b = getRange(data,a0)	
 	swing = math.radians(theta)	
@@ -59,7 +58,7 @@ def callback(data):
 	#publish msg
 	msg = pid_input()
 	msg.pid_error = error		
-	msg.pid_vel = vel		
+	msg.pid_vel = data.ranges[540]		
 	pub.publish(msg)
 	
 
