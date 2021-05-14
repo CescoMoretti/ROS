@@ -49,6 +49,7 @@ class reactive_follow_gap:
     
     def find_best_point(self, start_i, end_i, ranges):
         """Start_i & end_i are start and end indicies of max-gap range, respectively"""
+        '''
         #Middle of the gap
         i = (start_i + end_i) /2
         return i
@@ -62,7 +63,7 @@ class reactive_follow_gap:
                 max_value = ranges[i]
                 max_ind = i
         return max_ind
-        '''
+        
 
     def lidar_callback(self, data):        
         global past_angle
@@ -78,7 +79,7 @@ class reactive_follow_gap:
                 
 
         #Eliminate all points inside 'bubble' of the nearest object 
-        alpha = math.atan2(0.8,ranges[min_ind]) #lidar ray at the end of the bubble
+        alpha = math.atan2(1.0,ranges[min_ind]) #lidar ray at the end of the bubble
         alpha = math.degrees(alpha)
         x = math.ceil(alpha/0.25)
         starti = int(min_ind -x)
