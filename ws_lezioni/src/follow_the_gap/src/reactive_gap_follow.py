@@ -96,7 +96,7 @@ class reactive_follow_gap:
         angle = (float(direction) * 0.25) -135
          
         #pid angle        
-        steer = angle * 0.007
+        steer = -angle * 0.007
 
         #clamp per lo steer
         if steer > 0.45: 
