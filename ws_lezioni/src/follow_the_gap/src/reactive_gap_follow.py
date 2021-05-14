@@ -79,7 +79,7 @@ class reactive_follow_gap:
                 
 
         #Eliminate all points inside 'bubble' of the nearest object 
-        alpha = math.atan2(0.8,ranges[min_ind]) #lidar ray at the end of the bubble
+        alpha = math.atan2(0.9,ranges[min_ind]) #lidar ray at the end of the bubble
         alpha = math.degrees(alpha)
         x = math.ceil(alpha/0.25)
         starti = int(min_ind -x)
@@ -114,7 +114,7 @@ class reactive_follow_gap:
         elif data.ranges[direction] < 0.1:
             vel = 0.0
         else:
-            vel = 8000.0
+            vel = 7500.0
       
         #Publish Drive message
         msg = Point32()
