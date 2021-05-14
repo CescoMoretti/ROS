@@ -99,10 +99,10 @@ class reactive_follow_gap:
         steer = -angle * 0.0075
 
         #clamp per lo steer
-        if steer > 0.45: 
-            steer = 0.45
-        elif steer < -0.45:
-            steer = -0.45
+        if steer > 0.5: 
+            steer = 0.5
+        elif steer < -0.5:
+            steer = -0.5
 
         #velocity   
         if data.ranges[direction] > 4.0:
