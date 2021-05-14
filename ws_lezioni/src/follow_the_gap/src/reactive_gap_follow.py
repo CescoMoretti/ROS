@@ -105,8 +105,10 @@ class reactive_follow_gap:
             steer = -0.45
 
         #velocity   
-        if data.ranges[direction] > 2.2:
+        if data.ranges[direction] > 1.5:
             vel = 15000.0
+        elif data.ranges[direction] > 0.5:
+            vel = 0.0
         else:
             vel = 8000.0
       
