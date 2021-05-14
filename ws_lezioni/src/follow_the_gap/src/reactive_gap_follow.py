@@ -110,7 +110,7 @@ class reactive_follow_gap:
 
         #velocity   
         if data.ranges[direction] > 2.0:
-            vel = 4500.0 * data.ranges[direction]
+            vel = 4000.0 * data.ranges[direction]
             if vel > 15000: vel = 15000
         elif data.ranges[direction] < 0.1:
             vel = 0.0
