@@ -42,7 +42,7 @@ def control(data):
 		angle = 0.5
 	
 	#controllo velocita
-	if data.pid_vel > 3.0:
+	if data.pid_vel > 2.2:
 		vel = 15000.0
 	else:
 		vel = 8000.0
