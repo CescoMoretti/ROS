@@ -48,9 +48,12 @@ class reactive_follow_gap:
             return 0,start         
     
     def find_best_point(self, start_i, end_i, ranges):
-        """Start_i & end_i are start and end indicies of max-gap range, respectively
-        Return index of best point in ranges (furthest point)
-        """
+        """Start_i & end_i are start and end indicies of max-gap range, respectively"""
+        #Middle of the gap
+        i = (start_i + end_i) /2
+        return i
+        '''
+        #Return index of best point in ranges (furthest point)
         max_value = 0        
         max_ind = 0
        
@@ -58,8 +61,8 @@ class reactive_follow_gap:
             if ranges[i] > max_value and i > 180 and i < 900:
                 max_value = ranges[i]
                 max_ind = i
-
         return max_ind
+        '''
 
     def lidar_callback(self, data):        
         global past_angle
